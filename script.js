@@ -1,18 +1,97 @@
 const data = [
   {
-    name: 'subject',
-    label: '主題',
-    tags: [
-      { label: '猫', value: 'cat', children: [
-        { label: '子猫', value: 'kitten' },
-        { label: '虎猫', value: 'tiger cat' }
-      ]},
-      { label: '犬', value: 'dog', children: [
-        { label: '子犬', value: 'puppy' }
-      ]},
-      { label: '花', value: 'flower' }
-    ]
-  },
+  name: 'subject',
+  label: '主題',
+  tags: [
+   {
+  label: '人物（女性）',
+  value: 'woman portrait',
+  children: [
+    { label: '赤ちゃん', value: 'baby girl' },
+    { label: '3歳', value: '3 year old girl' },
+    { label: '小学生', value: 'elementary school girl' },
+    { label: '中学生', value: 'junior high school girl' },
+    { label: '高校生', value: 'high school girl' },
+    { label: '10代', value: 'teenage girl' },
+    { label: '20代', value: 'woman in her 20s' },
+    { label: '30代', value: 'woman in her 30s' },
+    { label: '40代', value: 'woman in her 40s' },
+    { label: '50代', value: 'woman in her 50s' },
+    { label: '60代', value: 'woman in her 60s' },
+    { label: '70代', value: 'woman in her 70s' },
+    { label: '80代', value: 'woman in her 80s' }
+  ]
+},
+
+    { label: '人物（男性）', value: 'man portrait' },
+    { label: 'こども（男の子）', value: 'boy child' },
+    { label: 'こども（女の子）', value: 'girl child' },
+    { label: '赤ちゃん', value: 'baby' },
+    { label: '動物', value: 'animal', children: [
+      { label: 'キツネ', value: 'fox' },
+      { label: 'うさぎ', value: 'rabbit' },
+      { label: '馬', value: 'horse' }
+    ]},
+    { label: '犬', value: 'dog', children: [
+      { label: '子犬', value: 'puppy' },
+      { label: '柴犬', value: 'shiba inu' }
+    ]},
+    { label: '猫', value: 'cat', children: [
+      { label: '子猫', value: 'kitten' },
+      { label: '虎猫', value: 'tiger cat' }
+    ]},
+    { label: '花', value: 'flower', children: [
+      { label: 'バラ', value: 'rose' },
+      { label: 'チューリップ', value: 'tulip' },
+      { label: '桜', value: 'cherry blossom' }
+    ]},
+    { label: '天気', value: 'weather', children: [
+      { label: '晴れ', value: 'sunny sky' },
+      { label: '雨', value: 'rainy day' },
+      { label: '霧', value: 'foggy' }
+    ]},
+    { label: '鳥', value: 'bird', children: [
+      { label: 'フクロウ', value: 'owl' },
+      { label: 'インコ', value: 'parrot' },
+      { label: 'カワセミ', value: 'kingfisher' }
+    ]},
+    { label: '魚 / 水中生物', value: 'underwater creature', children: [
+      { label: 'クラゲ', value: 'jellyfish' },
+      { label: '熱帯魚', value: 'tropical fish' }
+    ]},
+    { label: 'ドリンク', value: 'drink', children: [
+      { label: 'コーヒー', value: 'coffee cup' },
+      { label: '紅茶', value: 'tea cup' },
+      { label: 'ワイン', value: 'wine glass' }
+    ]},
+    { label: '風景', value: 'landscape', children: [
+      { label: '山', value: 'mountain' },
+      { label: '海', value: 'ocean' },
+      { label: '草原', value: 'meadow' }
+    ]},
+    { label: '建物', value: 'architecture', children: [
+      { label: '一軒家', value: 'house' },
+      { label: 'ビル', value: 'skyscraper' },
+      { label: '教会', value: 'church' }
+    ]},
+    { label: 'イベント', value: 'event', children: [
+      { label: '誕生日', value: 'birthday party' },
+      { label: '結婚式', value: 'wedding' },
+      { label: 'お祭り', value: 'festival' }
+    ]},
+    { label: 'インテリア', value: 'interior', children: [
+      { label: 'キッチン', value: 'kitchen interior' },
+      { label: 'リビング', value: 'living room' },
+      { label: '書斎', value: 'study room' }
+    ]},
+    { label: 'テクスチャ', value: 'texture', children: [
+      { label: '木目', value: 'wood grain' },
+      { label: '金属', value: 'metal surface' },
+      { label: '布', value: 'fabric texture' }
+    ]}
+  ]
+},
+
   {
     name: 'style',
     label: 'スタイル',
