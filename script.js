@@ -62,7 +62,7 @@ function createCategory(cat) {
   cat.tags.forEach(tag => {
     const btn = document.createElement('button');
     btn.textContent = tag.label;
-    btn.addEventListener('click', () => selectTag(cat.name, tag, btnWrap));
+    btn.addEventListener('click', (event) => selectTag(cat.name, tag, btnWrap, event));
     btnWrap.appendChild(btn);
   });
 
@@ -70,17 +70,20 @@ function createCategory(cat) {
   return container;
 }
 
-function selectTag(category, tag, btnWrap) {
+function selectTag(category, tag, btnWrap, event) {
   selected[category] = tag.value;
 
+  // 全てのボタンのactive解除
   Array.from(btnWrap.querySelectorAll('button')).forEach(b => b.classList.remove('active'));
   event.target.classList.add('active');
 
+  // 既存の子ボタン削除
   const existing = btnWrap.nextElementSibling;
   if (existing && existing.classList.contains('child-buttons')) {
     existing.remove();
   }
 
+  // 子ボタンがある場合は生成
   if (tag.children) {
     const childWrap = document.createElement('div');
     childWrap.className = 'child-buttons';
@@ -110,9 +113,16 @@ function updatePrompt() {
 }
 
 function clearSelection() {
+  // 状態リセット
   Object.keys(selected).forEach(k => delete selected[k]);
+
+  // 全てのアクティブクラス解除
   document.querySelectorAll('button.active').forEach(b => b.classList.remove('active'));
+
+  // 派生ボタン削除
   document.querySelectorAll('.child-buttons').forEach(el => el.remove());
+
+  // プロンプトクリア
   document.getElementById('prompt').value = '';
 }
 
@@ -122,9 +132,11 @@ document.addEventListener('DOMContentLoaded', () => {
     container.appendChild(createCategory(cat));
   });
 
+  // コピー処理
   document.getElementById('copyBtn').addEventListener('click', () => {
     navigator.clipboard.writeText(document.getElementById('prompt').value);
   });
 
+  // クリア処理
   document.getElementById('clearBtn').addEventListener('click', clearSelection);
 });
