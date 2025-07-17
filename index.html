@@ -1,0 +1,27 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a//dev/null b/index.html
+index 0000000000000000000000000000000000000000..58328b014a0040b199f88b7a752260cbaa75a2ed 100644
+--- a//dev/null
++++ b/index.html
+@@ -0,0 +1,18 @@
++<!DOCTYPE html>
++<html lang="ja">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Firefly Prompt Generator</title>
++    <link rel="stylesheet" href="style.css">
++</head>
++<body>
++    <h1>Firefly Prompt Generator</h1>
++    <div id="categories"></div>
++    <div id="result">
++        <textarea id="prompt" readonly></textarea>
++        <button id="copyBtn">コピー</button>
++    </div>
++    <script src="script.js"></script>
++</body>
++</html>
+ 
+EOF
+)
