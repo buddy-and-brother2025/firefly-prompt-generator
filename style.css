@@ -1,3 +1,4 @@
+/* ベース全体 */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   padding: 24px;
@@ -6,8 +7,9 @@ body {
   line-height: 1.6;
 }
 
+/* 各カテゴリ全体 */
 .category {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .category h2 {
@@ -15,13 +17,17 @@ body {
   margin-bottom: 8px;
 }
 
+/* ボタン群ラッパー（親カテゴリ） */
 .buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-bottom: 10px;
 }
 
-.buttons button {
+/* ボタン共通スタイル */
+.buttons button,
+.child-buttons button {
   padding: 6px 12px;
   border: none;
   border-radius: 6px;
@@ -30,15 +36,43 @@ body {
   transition: background-color 0.2s;
 }
 
-.buttons button:hover {
+/* ホバー共通 */
+.buttons button:hover,
+.child-buttons button:hover {
   background-color: #ddd;
 }
 
+/* 選択中のボタン */
 button.active {
   background-color: #007bff;
   color: #fff;
 }
 
+/* 子要素（階層2）のボタン群 */
+.child-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-left: 16px;
+  margin-bottom: 10px;
+}
+
+/* 子ボタンの見た目差別化 */
+.child-buttons button {
+  background-color: #f0f0f0;
+  border: 1px dashed #aaa;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* 子ボタンがactiveな場合 */
+.child-buttons button.active {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* 結果出力部分 */
 #result {
   margin-top: 30px;
 }
@@ -51,4 +85,11 @@ button.active {
   border: 1px solid #ccc;
   border-radius: 6px;
   box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* コピー・クリアボタンの配置 */
+#actionButtons {
+  display: flex;
+  gap: 10px;
 }
