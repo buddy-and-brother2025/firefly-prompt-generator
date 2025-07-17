@@ -70,7 +70,6 @@ function createCategory(cat) {
 }
 
 function selectTag(category, tag, btnWrap) {
-  // clear previous selection
   selected[category] = tag.value;
   Array.from(btnWrap.querySelectorAll('button')).forEach(b => b.classList.remove('active'));
   const childrenWrap = btnWrap.nextElementSibling;
