@@ -150,19 +150,20 @@ function createCategory(cat) {
 }
 
 function selectTag(category, tag, btnWrap, event) {
+  // 親カテゴリの選択（1つだけ選べる）
   selected[category] = tag.value;
 
-  // 全てのボタンのactive解除
+  // 親ボタンの見た目更新
   Array.from(btnWrap.querySelectorAll('button')).forEach(b => b.classList.remove('active'));
   event.target.classList.add('active');
 
-  // 既存の子ボタン削除
-  const existing = btnWrap.nextElementSibling;
-  if (existing && existing.classList.contains('child-buttons')) {
-    existing.remove();
+  // 既に表示されてる子ボタンがあれば削除
+  const childrenWrap = btnWrap.nextElementSibling;
+  if (childrenWrap && childrenWrap.classList.contains('child-buttons')) {
+    childrenWrap.remove();
   }
 
-  // 子ボタンがある場合は生成
+  // 子タグ（派生）があれば表示して複数選択可能に
   if (tag.children) {
     const childWrap = document.createElement('div');
     childWrap.className = 'child-buttons';
@@ -170,15 +171,31 @@ function selectTag(category, tag, btnWrap, event) {
     tag.children.forEach(child => {
       const cbtn = document.createElement('button');
       cbtn.textContent = child.label;
+
       cbtn.addEventListener('click', () => {
-        selected[category] = child.value;
-        Array.from(childWrap.querySelectorAll('button')).forEach(b => b.classList.remove('active'));
-        cbtn.classList.add('active');
+        const key = `${category}_children`;
+        if (!Array.isArray(selected[key])) {
+          selected[key] = [];
+        }
+
+        const index = selected[key].indexOf(child.value);
+        if (index > -1) {
+          // すでに選ばれてたら外す
+          selected[key].splice(index, 1);
+          cbtn.classList.remove('active');
+        } else {
+          // 新しく追加
+          selected[key].push(child.value);
+          cbtn.classList.add('active');
+        }
+
         updatePrompt();
       });
+
       childWrap.appendChild(cbtn);
     });
 
+    // 親ボタンの下に追加表示
     btnWrap.after(childWrap);
   }
 
@@ -187,7 +204,17 @@ function selectTag(category, tag, btnWrap, event) {
 
 function updatePrompt() {
   const promptArea = document.getElementById('prompt');
-  const parts = Object.values(selected);
+  const parts = [];
+
+  Object.keys(selected).forEach(key => {
+    const val = selected[key];
+    if (Array.isArray(val)) {
+      parts.push(...val);
+    } else {
+      parts.push(val);
+    }
+  });
+
   promptArea.value = parts.join(', ');
 }
 
