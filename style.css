@@ -88,7 +88,7 @@ button.active {
 }
 
 #actionButtons button {
-  background-color: #1a2238;
+  background-color:#001961;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -98,8 +98,8 @@ button.active {
 }
 
 #actionButtons button:hover {
-  background-color: #f9b233;
-  color: #1a2238;
+  background-color: #FED800;
+  color: #001961;
 }
 
 /* コピーされた状態 */
