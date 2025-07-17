@@ -10,8 +10,8 @@ body {
 /* タイトル */
 h1 {
   font-size: 32px;
-  color: #1a2238;
-  background-color: #f9b233; /* 黄色背景で映え */
+  color: #FED800;              /* 黄色い文字 */
+  background-color: #001961;   /* 紺の背景 */
   padding: 12px 16px;
   border-radius: 4px;
   margin-bottom: 32px;
