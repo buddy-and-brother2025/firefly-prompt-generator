@@ -1,96 +1,206 @@
 const data = [
   {
-  name: 'subject',
-  label: '主題',
-  tags: [
-   {
-  label: '人物（女性）',
-  value: 'woman portrait',
-  children: [
-    { label: '赤ちゃん', value: 'baby girl' },
-    { label: '3歳', value: '3 year old girl' },
-    { label: '小学生', value: 'elementary school girl' },
-    { label: '中学生', value: 'junior high school girl' },
-    { label: '高校生', value: 'high school girl' },
-    { label: '10代', value: 'teenage girl' },
-    { label: '20代', value: 'woman in her 20s' },
-    { label: '30代', value: 'woman in her 30s' },
-    { label: '40代', value: 'woman in her 40s' },
-    { label: '50代', value: 'woman in her 50s' },
-    { label: '60代', value: 'woman in her 60s' },
-    { label: '70代', value: 'woman in her 70s' },
-    { label: '80代', value: 'woman in her 80s' }
-  ]
-},
+    name: 'subject',
+    label: '主題',
+    tags: [
+      {
+        label: '人物（女性）',
+        value: 'woman portrait',
+        children: [
+          { label: '赤ちゃん', value: 'baby girl' },
+          { label: '3歳', value: '3 year old girl' },
+          { label: '小学生', value: 'elementary school girl' },
+          { label: '中学生', value: 'junior high school girl' },
+          { label: '高校生', value: 'high school girl' },
+          { label: '10代', value: 'teenage girl' },
+          { label: '20代', value: 'woman in her 20s' },
+          { label: '30代', value: 'woman in her 30s' },
+          { label: '40代', value: 'woman in her 40s' },
+          { label: '50代', value: 'woman in her 50s' },
+          { label: '60代', value: 'woman in her 60s' },
+          { label: '70代', value: 'woman in her 70s' },
+          { label: '80代', value: 'woman in her 80s' },
+          { label: '日本人', value: 'Japanese woman' },
+          { label: 'アメリカ人', value: 'American woman' },
+          { label: '白人', value: 'Caucasian woman' },
+          { label: '黒人', value: 'Black woman' }
+        ]
+      },
 
-    { label: '人物（男性）', value: 'man portrait' },
-    { label: 'こども（男の子）', value: 'boy child' },
-    { label: 'こども（女の子）', value: 'girl child' },
-    { label: '赤ちゃん', value: 'baby' },
-    { label: '動物', value: 'animal', children: [
-      { label: 'キツネ', value: 'fox' },
-      { label: 'うさぎ', value: 'rabbit' },
-      { label: '馬', value: 'horse' }
-    ]},
-    { label: '犬', value: 'dog', children: [
-      { label: '子犬', value: 'puppy' },
-      { label: '柴犬', value: 'shiba inu' }
-    ]},
-    { label: '猫', value: 'cat', children: [
-      { label: '子猫', value: 'kitten' },
-      { label: '虎猫', value: 'tiger cat' }
-    ]},
-    { label: '花', value: 'flower', children: [
-      { label: 'バラ', value: 'rose' },
-      { label: 'チューリップ', value: 'tulip' },
-      { label: '桜', value: 'cherry blossom' }
-    ]},
-    { label: '天気', value: 'weather', children: [
+      {
+        label: '人物（男性）', value: 'man portrait',
+        children: [
+          { label: '赤ちゃん', value: 'baby girl' },
+          { label: '3歳', value: '3 year old girl' },
+          { label: '小学生', value: 'elementary school girl' },
+          { label: '中学生', value: 'junior high school girl' },
+          { label: '高校生', value: 'high school girl' },
+          { label: '10代', value: 'teenage girl' },
+          { label: '20代', value: 'woman in her 20s' },
+          { label: '30代', value: 'woman in her 30s' },
+          { label: '40代', value: 'woman in her 40s' },
+          { label: '50代', value: 'woman in her 50s' },
+          { label: '60代', value: 'woman in her 60s' },
+          { label: '70代', value: 'woman in her 70s' },
+          { label: '80代', value: 'woman in her 80s' },
+          { label: '日本人', value: 'Japanese woman' },
+          { label: 'アメリカ人', value: 'American woman' },
+          { label: '白人', value: 'Caucasian woman' },
+          { label: '黒人', value: 'Black woman' }
+        ]
+      },
+      {
+        label: '動物', value: 'animal', children: [
+          { label: 'キツネ', value: 'fox' },
+          { label: 'うさぎ', value: 'rabbit' },
+          { label: '馬', value: 'horse' },
+          { label: '猿', value: 'monkey' },
+          { label: 'ゴリラ', value: 'gorilla' },
+          { label: 'シマウマ', value: 'zebra' },
+          { label: 'キリン', value: 'giraffe' },
+          { label: '像', value: 'elephant' },
+          { label: '鹿', value: 'deer' },
+          { label: 'カバ', value: 'hippopotamus' }
+
+        ]
+      },
+      {
+        label: '犬', value: 'dog', children: [
+          { label: '子犬', value: 'puppy' },
+          { label: '柴犬', value: 'shiba inu' },
+          { label: '雑種', value: 'mixed breed dog' },
+          { label: '老犬', value: 'senior dog' },
+          { label: 'ダックスフント', value: 'dachshund' },
+          { label: 'チワワ', value: 'chihuahua' },
+          { label: 'パピヨン', value: 'papillon' },
+          { label: 'ドーベルマン', value: 'doberman' },
+          { label: 'イタリアングレーハウンド', value: 'Italian greyhound' },
+          { label: '秋田犬', value: 'Akita dog' }
+        ]
+      },
+      {
+        label: '猫', value: 'cat', children: [
+          { label: '子猫', value: 'kitten' },
+        ]
+      },
+      {
+        label: '花', value: 'flower', children: [
+          { label: 'バラ', value: 'rose' },
+          { label: 'チューリップ', value: 'tulip' },
+          { label: '桜', value: 'cherry blossom' }
+        ]
+      },
+      {
+        label: '天気', value: 'weather', children: [
+          { label: '空', value: 'sky' },
+          { label: '夜空', value: 'night sky' },
+          { label: '雲', value: 'clouds' },
+          { label: '入道雲', value: 'cumulonimbus clouds' },
+          { label: '星空', value: 'starry sky' },
+          { label: '雪', value: 'snowfall' }
       { label: '晴れ', value: 'sunny sky' },
-      { label: '雨', value: 'rainy day' },
-      { label: '霧', value: 'foggy' }
-    ]},
-    { label: '鳥', value: 'bird', children: [
-      { label: 'フクロウ', value: 'owl' },
-      { label: 'インコ', value: 'parrot' },
-      { label: 'カワセミ', value: 'kingfisher' }
-    ]},
-    { label: '魚 / 水中生物', value: 'underwater creature', children: [
-      { label: 'クラゲ', value: 'jellyfish' },
-      { label: '熱帯魚', value: 'tropical fish' }
-    ]},
-    { label: 'ドリンク', value: 'drink', children: [
-      { label: 'コーヒー', value: 'coffee cup' },
-      { label: '紅茶', value: 'tea cup' },
-      { label: 'ワイン', value: 'wine glass' }
-    ]},
-    { label: '風景', value: 'landscape', children: [
-      { label: '山', value: 'mountain' },
-      { label: '海', value: 'ocean' },
-      { label: '草原', value: 'meadow' }
-    ]},
-    { label: '建物', value: 'architecture', children: [
-      { label: '一軒家', value: 'house' },
-      { label: 'ビル', value: 'skyscraper' },
-      { label: '教会', value: 'church' }
-    ]},
-    { label: 'イベント', value: 'event', children: [
-      { label: '誕生日', value: 'birthday party' },
-      { label: '結婚式', value: 'wedding' },
-      { label: 'お祭り', value: 'festival' }
-    ]},
-    { label: 'インテリア', value: 'interior', children: [
-      { label: 'キッチン', value: 'kitchen interior' },
-      { label: 'リビング', value: 'living room' },
-      { label: '書斎', value: 'study room' }
-    ]},
-    { label: 'テクスチャ', value: 'texture', children: [
-      { label: '木目', value: 'wood grain' },
-      { label: '金属', value: 'metal surface' },
-      { label: '布', value: 'fabric texture' }
-    ]}
-  ]
-},
+          { label: '雨', value: 'rainy day' },
+          { label: '霧', value: 'foggy' }
+        ]
+      },
+      {
+        label: '鳥', value: 'bird', children: [
+          { label: 'フクロウ', value: 'owl' },
+          { label: 'インコ', value: 'parrot' },
+          { label: 'カワセミ', value: 'kingfisher' }
+      { label: 'カラス', value: 'crow' },
+          { label: 'ニワトリ', value: 'chicken' },
+          { label: 'スズメ', value: 'sparrow' }
+        ]
+      },
+      {
+        label: '魚 / 水中生物', value: 'underwater creature', children: [
+          { label: 'クラゲ', value: 'jellyfish' },
+          { label: '熱帯魚', value: 'tropical fish' }
+        ]
+      },
+      {
+        label: 'ドリンク', value: 'drink', children: [
+          { label: 'コーヒー', value: 'coffee cup' },
+          { label: '紅茶', value: 'tea cup' },
+          { label: 'ワイン', value: 'wine glass' }
+       { label: 'お茶', value: 'tea' },
+          { label: '抹茶', value: 'matcha green tea' },
+          { label: '麦茶', value: 'barley tea' },
+          { label: 'コーラ', value: 'cola' },
+          { label: 'ビール', value: 'beer' },
+          { label: 'お酒', value: 'sake' },
+          { label: 'メロンソーダ', value: 'melon soda' }
+        ]
+      },
+      {
+        label: '風景', value: 'landscape', children: [
+          { label: '山', value: 'mountain' },
+          { label: '海', value: 'ocean' },
+          { label: '草原', value: 'meadow' }
+      { label: '冬山', value: 'snowy mountain' },
+          { label: '田舎', value: 'countryside' },
+          { label: '川', value: 'river' },
+          { label: '滝', value: 'waterfall' },
+          { label: '紅葉', value: 'autumn leaves' }
+      { label: '都会', value: 'urban cityscape' },
+          { label: '郊外', value: 'suburban area' },
+          { label: '住宅街', value: 'residential neighborhood' },
+          { label: '公園', value: 'park scenery' },
+          { label: '森林', value: 'forest' },
+          { label: '自然', value: 'natural landscape' },
+          { label: '駅前', value: 'in front of a station' },
+          { label: '宇宙', value: 'outer space' }
+        ]
+      },
+      {
+        label: '建物', value: 'architecture', children: [
+          { label: '一軒家', value: 'house' },
+          { label: 'ビル', value: 'skyscraper' },
+          { label: '教会', value: 'church' }
+          { label: 'ビル群', value: 'city buildings' },
+          { label: 'アパート', value: 'apartment building' },
+          { label: 'マンション', value: 'condominium' },
+          { label: '駅', value: 'train station exterior' }
+        ]
+      },
+      {
+        label: 'イベント', value: 'event', children: [
+          { label: '誕生日', value: 'birthday party' },
+          { label: '結婚式', value: 'wedding' },
+          { label: 'お祭り', value: 'festival' }
+        ]
+      },
+      {
+        label: 'インテリア', value: 'interior', children: [
+          { label: 'キッチン', value: 'kitchen interior' },
+          { label: 'リビング', value: 'living room' },
+          { label: '書斎', value: 'study room' }
+        ]
+      },
+      {
+        label: 'テクスチャ', value: 'texture', children: [
+          { label: '木目', value: 'wood grain' },
+          { label: '金属', value: 'metal surface' },
+          { label: '布', value: 'fabric texture' },
+          { label: 'コルク', value: 'cork texture' },
+          { label: '壁', value: 'wall surface' },
+          { label: '汚れた壁', value: 'dirty wall texture' },
+          { label: 'クラフト紙', value: 'kraft paper texture' },
+          { label: '大理石', value: 'marble texture' },
+          { label: '芝生', value: 'grass surface' },
+          { label: 'ウール', value: 'wool texture' },
+          { label: 'ざらざら', value: 'rough texture' },
+          { label: 'つるつる', value: 'smooth texture' },
+          { label: 'マット', value: 'matte surface' },
+          { label: '光沢', value: 'glossy surface' },
+          { label: '水面', value: 'water surface texture' },
+          { label: 'ひび割れ', value: 'cracked surface' },
+          { label: '布のしわ', value: 'wrinkled fabric' }
+        ]
+      }
+    ]
+  },
 
   {
     name: 'style',
@@ -257,25 +367,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // コピー処理
   document.getElementById('copyBtn').addEventListener('click', () => {
-  const promptText = document.getElementById('prompt').value;
-  const copyBtn = document.getElementById('copyBtn');
-  const status = document.getElementById('copyStatus');
+    const promptText = document.getElementById('prompt').value;
+    const copyBtn = document.getElementById('copyBtn');
+    const status = document.getElementById('copyStatus');
 
-  navigator.clipboard.writeText(promptText).then(() => {
-    // メッセージ表示
-    status.textContent = 'コピーしました';
-    status.style.opacity = '1';
+    navigator.clipboard.writeText(promptText).then(() => {
+      // メッセージ表示
+      status.textContent = 'コピーしました';
+      status.style.opacity = '1';
 
-    // ボタンに一時的なアニメーションスタイルを追加
-    copyBtn.classList.add('copied');
+      // ボタンに一時的なアニメーションスタイルを追加
+      copyBtn.classList.add('copied');
 
-    // 2秒後に元に戻す
-    setTimeout(() => {
-      status.style.opacity = '0';
-      copyBtn.classList.remove('copied');
-    }, 2000);
+      // 2秒後に元に戻す
+      setTimeout(() => {
+        status.style.opacity = '0';
+        copyBtn.classList.remove('copied');
+      }, 2000);
+    });
   });
-});
 
   // クリア処理
   document.getElementById('clearBtn').addEventListener('click', clearSelection);
