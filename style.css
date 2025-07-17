@@ -117,3 +117,10 @@ button.active {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+
+/* ✅ コピー直後のボタンに押した感を演出 */
+#copyBtn.copied {
+  background-color: #28a745 !important;
+  color: white;
+  transform: scale(0.96);
+}

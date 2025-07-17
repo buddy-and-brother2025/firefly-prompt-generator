@@ -152,17 +152,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // コピー処理
   document.getElementById('copyBtn').addEventListener('click', () => {
   const promptText = document.getElementById('prompt').value;
+  const copyBtn = document.getElementById('copyBtn');
+  const status = document.getElementById('copyStatus');
 
   navigator.clipboard.writeText(promptText).then(() => {
-    const status = document.getElementById('copyStatus');
+    // メッセージ表示
     status.textContent = 'コピーしました';
     status.style.opacity = '1';
 
+    // ボタンに一時的なアニメーションスタイルを追加
+    copyBtn.classList.add('copied');
+
+    // 2秒後に元に戻す
     setTimeout(() => {
       status.style.opacity = '0';
+      copyBtn.classList.remove('copied');
     }, 2000);
   });
 });
+
   // クリア処理
   document.getElementById('clearBtn').addEventListener('click', clearSelection);
 });
