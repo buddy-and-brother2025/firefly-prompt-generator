@@ -88,7 +88,7 @@ button.active {
 }
 
 #actionButtons button {
-  background-color:#001961;
+  background-color:#001961!important;
   color: #fff;
   padding: 10px 20px;
   border: none;
