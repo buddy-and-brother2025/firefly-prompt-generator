@@ -196,45 +196,69 @@ const data = [
           { label: '光沢', value: 'glossy surface' },
           { label: '水面', value: 'water surface texture' },
           { label: 'ひび割れ', value: 'cracked surface' },
-          { label: '布のしわ', value: 'wrinkled fabric' }
+          { label: '布のしわ', value: 'wrinkled fabric' },
+
+        ]
+      },
+      {
+        label: '国',
+        value: 'country',
+        children: [
+          { label: '日本', value: 'Japan' },
+          { label: 'アメリカ', value: 'United States' },
+          { label: 'フランス', value: 'France' },
+          { label: 'イギリス', value: 'United Kingdom' },
+          { label: 'イタリア', value: 'Italy' },
+          { label: 'ドイツ', value: 'Germany' },
+          { label: 'スペイン', value: 'Spain' },
+          { label: '中国', value: 'China' },
+          { label: '韓国', value: 'South Korea' },
+          { label: 'インド', value: 'India' },
+          { label: 'ブラジル', value: 'Brazil' },
+          { label: 'メキシコ', value: 'Mexico' },
+          { label: 'ロシア', value: 'Russia' },
+          { label: 'エジプト', value: 'Egypt' },
+          { label: 'オーストラリア', value: 'Australia' }
         ]
       }
-    ]
+
+    
+]
   },
 
-  {
-    name: 'style',
+{
+  name: 'style',
     label: 'スタイル',
-    tags: [
-      { label: '水彩', value: 'watercolor' },
-      { label: '油絵', value: 'oil painting' },
-      { label: 'アニメ', value: 'anime style' }
-    ]
-  },
-  {
-    name: 'background',
+      tags: [
+        { label: '水彩', value: 'watercolor' },
+        { label: '油絵', value: 'oil painting' },
+        { label: 'アニメ', value: 'anime style' }
+      ]
+},
+{
+  name: 'background',
     label: '背景',
-    tags: [
-      { label: '室内', value: 'indoor' },
-      { label: '屋外', value: 'outdoor' }
-    ]
-  },
-  {
-    name: 'light',
+      tags: [
+        { label: '室内', value: 'indoor' },
+        { label: '屋外', value: 'outdoor' }
+      ]
+},
+{
+  name: 'light',
     label: '光',
-    tags: [
-      { label: '昼', value: 'daylight' },
-      { label: '夜', value: 'night' }
-    ]
-  },
-  {
-    name: 'camera',
+      tags: [
+        { label: '昼', value: 'daylight' },
+        { label: '夜', value: 'night' }
+      ]
+},
+{
+  name: 'camera',
     label: 'カメラアングル',
-    tags: [
-      { label: '正面', value: 'front view' },
-      { label: '俯瞰', value: 'top view' }
-    ]
-  }
+      tags: [
+        { label: '正面', value: 'front view' },
+        { label: '俯瞰', value: 'top view' }
+      ]
+}
 ];
 
 const selected = {};
