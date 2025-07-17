@@ -112,6 +112,23 @@ function updatePrompt() {
   promptArea.value = parts.join(', ');
 }
 
+function copyPrompt() {
+  const prompt = document.getElementById('prompt').value;
+  navigator.clipboard.writeText(prompt).then(() => {
+    showCopyMessage();
+  });
+}
+
+function showCopyMessage() {
+  const status = document.getElementById('copyStatus');
+  status.textContent = 'コピーしました';
+  status.style.opacity = '1';
+
+  setTimeout(() => {
+    status.style.opacity = '0';
+  }, 2000);
+}
+
 function clearSelection() {
   // 状態リセット
   Object.keys(selected).forEach(k => delete selected[k]);
@@ -134,9 +151,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // コピー処理
   document.getElementById('copyBtn').addEventListener('click', () => {
-    navigator.clipboard.writeText(document.getElementById('prompt').value);
-  });
+  const promptText = document.getElementById('prompt').value;
 
+  navigator.clipboard.writeText(promptText).then(() => {
+    const status = document.getElementById('copyStatus');
+    status.textContent = 'コピーしました';
+    status.style.opacity = '1';
+
+    setTimeout(() => {
+      status.style.opacity = '0';
+    }, 2000);
+  });
+});
   // クリア処理
   document.getElementById('clearBtn').addEventListener('click', clearSelection);
 });

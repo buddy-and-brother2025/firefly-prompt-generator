@@ -109,3 +109,11 @@ button.active {
 #actionButtons button:hover {
   background-color: #ddd;
 }
+
+#copyStatus {
+  font-size: 13px;
+  color: green;
+  height: 1.2em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
