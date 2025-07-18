@@ -227,14 +227,124 @@ const data = [
   },
 
   {
-    name: 'style',
-    label: 'スタイル',
-    tags: [
-      { label: '水彩', value: 'watercolor' },
-      { label: '油絵', value: 'oil painting' },
-      { label: 'アニメ', value: 'anime style' }
-    ]
-  },
+  name: 'style',
+  label: 'スタイル',
+  tags: [
+    {
+      label: '水彩', value: 'watercolor',
+      children: [
+        { label: '淡い', value: 'light watercolor' },
+        { label: 'にじみ', value: 'bleeding watercolor' },
+        { label: '透明感', value: 'transparent watercolor' }
+      ]
+    },
+    {
+      label: '油絵', value: 'oil painting',
+      children: [
+        { label: '厚塗り', value: 'impasto' },
+        { label: 'リアル調', value: 'realistic oil painting' },
+        { label: '印象派', value: 'impressionist' }
+      ]
+    },
+    {
+      label: 'アニメ', value: 'anime style',
+      children: [
+        { label: '手描き風', value: 'hand-drawn anime' },
+        { label: 'セル画調', value: 'cel-shading' },
+        { label: 'デフォルメ', value: 'chibi style' }
+      ]
+    },
+    {
+      label: 'スケッチ', value: 'sketch',
+      children: [
+        { label: '鉛筆', value: 'pencil sketch' },
+        { label: 'シャープ', value: 'sharp lines' },
+        { label: 'ラフ', value: 'rough sketch' }
+      ]
+    },
+    {
+      label: 'インク画', value: 'ink drawing',
+      children: [
+        { label: 'モノクロ', value: 'monochrome ink' },
+        { label: 'ペン画', value: 'pen drawing' },
+        { label: '漫画風', value: 'comic style ink' }
+      ]
+    },
+    {
+      label: 'ピクセルアート', value: 'pixel art',
+      children: [
+        { label: '8bit', value: '8-bit style' },
+        { label: '16bit', value: '16-bit style' },
+        { label: 'モザイク調', value: 'mosaic pixel' }
+      ]
+    },
+    {
+      label: 'サイバーパンク', value: 'cyberpunk',
+      children: [
+        { label: 'ネオン', value: 'neon lights' },
+        { label: '都市未来', value: 'futuristic city' },
+        { label: 'ダーク', value: 'dark cyberpunk' }
+      ]
+    },
+    {
+      label: 'ヴィンテージ', value: 'vintage style',
+      children: [
+        { label: 'セピア', value: 'sepia tone' },
+        { label: '古写真風', value: 'old photo style' },
+        { label: 'レトロカラー', value: 'retro color scheme' }
+      ]
+    },
+    {
+      label: 'ノスタルジック', value: 'nostalgic style',
+      children: [
+        { label: '昭和風', value: 'showa-era style' },
+        { label: '昔の風景', value: 'nostalgic landscape' },
+        { label: 'アナログ感', value: 'analog feel' }
+      ]
+    },
+    {
+      label: 'ジオメトリック', value: 'geometric style',
+      children: [
+        { label: '三角形', value: 'triangle motif' },
+        { label: 'シンメトリー', value: 'symmetry' },
+        { label: 'パターン', value: 'geometric pattern' }
+      ]
+    },
+    {
+      label: 'ミニマル', value: 'minimalist style',
+      children: [
+        { label: '白背景', value: 'white background' },
+        { label: '少ない要素', value: 'few elements' },
+        { label: 'モノトーン', value: 'monotone' }
+      ]
+    },
+    {
+      label: 'スチームパンク', value: 'steampunk',
+      children: [
+        { label: '歯車', value: 'gears' },
+        { label: '蒸気機械', value: 'steam machines' },
+        { label: '真鍮', value: 'brass elements' }
+      ]
+    },
+    {
+      label: '和風イラスト', value: 'japanese style illustration',
+      children: [
+        { label: '浮世絵', value: 'ukiyo-e' },
+        { label: '和紙風', value: 'washi texture' },
+        { label: '筆タッチ', value: 'brush stroke' }
+      ]
+    },
+    {
+      label: '絵本タッチ', value: 'storybook style',
+      children: [
+        { label: 'ほっこり系', value: 'warm tone' },
+        { label: 'ふんわり背景', value: 'soft background' },
+        { label: '手描き線', value: 'hand-drawn lines' }
+      ]
+    }
+  ]
+},
+
   {
     name: 'background',
     label: '背景',
