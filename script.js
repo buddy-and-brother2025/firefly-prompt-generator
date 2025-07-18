@@ -350,7 +350,17 @@ const data = [
     label: '背景',
     tags: [
       { label: '室内', value: 'indoor' },
-      { label: '屋外', value: 'outdoor' }
+      { label: '屋外', value: 'outdoor' },
+      { label: '街中', value: 'urban street' },
+      { label: '都会', value: 'cityscape' },
+      { label: '商店街', value: 'shopping district' },
+      { label: '住宅街', value: 'residential area' },
+      { label: '自然', value: 'nature background' },
+      { label: '海', value: 'ocean background' },
+      { label: '山', value: 'mountain background' },
+      { label: '白', value: 'white background' },
+      { label: '黒', value: 'black background' },
+      { label: '背景透過', value: 'transparent background' }
     ]
   },
   {
