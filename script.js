@@ -97,8 +97,8 @@ const data = [
           { label: '雲', value: 'clouds' },
           { label: '入道雲', value: 'cumulonimbus clouds' },
           { label: '星空', value: 'starry sky' },
-          { label: '雪', value: 'snowfall' }
-      { label: '晴れ', value: 'sunny sky' },
+          { label: '雪', value: 'snowfall' },
+          { label: '晴れ', value: 'sunny sky' },
           { label: '雨', value: 'rainy day' },
           { label: '霧', value: 'foggy' }
         ]
@@ -107,10 +107,10 @@ const data = [
         label: '鳥', value: 'bird', children: [
           { label: 'フクロウ', value: 'owl' },
           { label: 'インコ', value: 'parrot' },
-          { label: 'カワセミ', value: 'kingfisher' }
-      { label: 'カラス', value: 'crow' },
+          { label: 'カワセミ', value: 'kingfisher' },
+          { label: 'カラス', value: 'crow' },
           { label: 'ニワトリ', value: 'chicken' },
-          { label: 'スズメ', value: 'sparrow' }
+          { label: 'スズメ', value: 'sparrow' },
         ]
       },
       {
@@ -123,45 +123,45 @@ const data = [
         label: 'ドリンク', value: 'drink', children: [
           { label: 'コーヒー', value: 'coffee cup' },
           { label: '紅茶', value: 'tea cup' },
-          { label: 'ワイン', value: 'wine glass' }
-       { label: 'お茶', value: 'tea' },
+          { label: 'ワイン', value: 'wine glass' },
+          { label: 'お茶', value: 'tea' },
           { label: '抹茶', value: 'matcha green tea' },
           { label: '麦茶', value: 'barley tea' },
           { label: 'コーラ', value: 'cola' },
           { label: 'ビール', value: 'beer' },
           { label: 'お酒', value: 'sake' },
-          { label: 'メロンソーダ', value: 'melon soda' }
+          { label: 'メロンソーダ', value: 'melon soda' },
         ]
       },
       {
         label: '風景', value: 'landscape', children: [
           { label: '山', value: 'mountain' },
           { label: '海', value: 'ocean' },
-          { label: '草原', value: 'meadow' }
-      { label: '冬山', value: 'snowy mountain' },
+          { label: '草原', value: 'meadow' },
+          { label: '冬山', value: 'snowy mountain' },
           { label: '田舎', value: 'countryside' },
           { label: '川', value: 'river' },
           { label: '滝', value: 'waterfall' },
-          { label: '紅葉', value: 'autumn leaves' }
-      { label: '都会', value: 'urban cityscape' },
+          { label: '紅葉', value: 'autumn leaves' },
+          { label: '都会', value: 'urban cityscape' },
           { label: '郊外', value: 'suburban area' },
           { label: '住宅街', value: 'residential neighborhood' },
           { label: '公園', value: 'park scenery' },
           { label: '森林', value: 'forest' },
           { label: '自然', value: 'natural landscape' },
           { label: '駅前', value: 'in front of a station' },
-          { label: '宇宙', value: 'outer space' }
+          { label: '宇宙', value: 'outer space' },
         ]
       },
       {
         label: '建物', value: 'architecture', children: [
           { label: '一軒家', value: 'house' },
           { label: 'ビル', value: 'skyscraper' },
-          { label: '教会', value: 'church' }
+          { label: '教会', value: 'church' },
           { label: 'ビル群', value: 'city buildings' },
           { label: 'アパート', value: 'apartment building' },
           { label: 'マンション', value: 'condominium' },
-          { label: '駅', value: 'train station exterior' }
+          { label: '駅', value: 'train station exterior' },
         ]
       },
       {
@@ -222,43 +222,43 @@ const data = [
         ]
       }
 
-    
-]
+
+    ]
   },
 
-{
-  name: 'style',
+  {
+    name: 'style',
     label: 'スタイル',
-      tags: [
-        { label: '水彩', value: 'watercolor' },
-        { label: '油絵', value: 'oil painting' },
-        { label: 'アニメ', value: 'anime style' }
-      ]
-},
-{
-  name: 'background',
+    tags: [
+      { label: '水彩', value: 'watercolor' },
+      { label: '油絵', value: 'oil painting' },
+      { label: 'アニメ', value: 'anime style' }
+    ]
+  },
+  {
+    name: 'background',
     label: '背景',
-      tags: [
-        { label: '室内', value: 'indoor' },
-        { label: '屋外', value: 'outdoor' }
-      ]
-},
-{
-  name: 'light',
+    tags: [
+      { label: '室内', value: 'indoor' },
+      { label: '屋外', value: 'outdoor' }
+    ]
+  },
+  {
+    name: 'light',
     label: '光',
-      tags: [
-        { label: '昼', value: 'daylight' },
-        { label: '夜', value: 'night' }
-      ]
-},
-{
-  name: 'camera',
+    tags: [
+      { label: '昼', value: 'daylight' },
+      { label: '夜', value: 'night' }
+    ]
+  },
+  {
+    name: 'camera',
     label: 'カメラアングル',
-      tags: [
-        { label: '正面', value: 'front view' },
-        { label: '俯瞰', value: 'top view' }
-      ]
-}
+    tags: [
+      { label: '正面', value: 'front view' },
+      { label: '俯瞰', value: 'top view' }
+    ]
+  }
 ];
 
 const selected = {};
